@@ -1,0 +1,21 @@
+<h1>String Binding</h1>
+<p>
+  {{stringValue}} | {{numberValue}}
+</p>
+
+<h1>Property Binding</h1>
+
+<input type="text" value="{{stringValue}}"> | <input type="text" [value]="stringValue">
+
+<p [ngClass]="{'redBorder': onTest()}">Kırmızı yazı (databinding.component.css icersinde tanımlı -> redBorder)</p>
+
+<p [ngStyle]="{color: 'blue'}">Mavi Yazı</p>
+
+<h1>Binding to Custom Properties</h1>
+<app-property-binding [result]="10"></app-property-binding> <!--property-binding icerisindeki result degeri burada degistirdik.-->
+
+<h1>Event Binding - Binding To Custom Event</h1>
+<app-event-binding (clickable)="onClickedCustom($event)"></app-event-binding>
+
+<h1>Two-Way-Binding</h1>
+<app-two-way-binding></app-two-way-binding>
